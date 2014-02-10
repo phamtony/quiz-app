@@ -1,0 +1,53 @@
+html {
+	background-color: #999E99;
+}
+
+body {
+	font-family: 'Andale Mono', Arial, sans-serif;
+	padding-left: 120px;
+	padding-right: 120px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+header {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 70%;
+	background-color: rgba(242,244,245,.7);
+	box-shadow: 15px 15px 15px #888
+}
+
+header h1 {
+	text-align: center;
+	padding: 15px;
+}
+
+section {
+	padding: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 70%;
+	background-color: rgba(242,244,245,.7);
+	box-shadow: 15px 15px 15px #888
+}
+
+#radio input {
+	margin: 15px;
+}
+
+#questions {
+	margin-bottom: 20px;
+}
+
+#next input {
+	margin: 10px;
+	float: left;
+}
+#back input {
+	float: auto;
+	margin: 10px;
+
+}
