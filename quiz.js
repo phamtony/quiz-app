@@ -107,7 +107,7 @@ var quizApp = (function () {
 
 			var checkedAnswer = document.querySelector('input[name="choices"][value="' + selections[currentQuestion] + '"]');
 
-			if(!isNaN(checkedAnswer.value)){
+			if(checkedAnswer.value){
 				checkedAnswer.checked = true;	
 			}; 
 				
@@ -122,10 +122,8 @@ var quizApp = (function () {
 
 		checkAnswer: function () {
 			var answer = document.querySelector('input[name="choices"]:checked');
-			if(answer.value == allQuestions[currentQuestion].correctAnswer){
-				correct++;
-			};
 			selections[currentQuestion] = +answer.value;
+			console.log(selections);
 		},
 
 		showResults: function () {
@@ -133,6 +131,13 @@ var quizApp = (function () {
 			radioButton.innerHTML = "";
 			next.innerHTML = "";
 			back.innerHTML = "";
+
+			var correct = 0;
+			for (var i = 0; i < allQuestions.length; i++) {
+				if (selections[i] == allQuestions[i].correctAnswer) {
+					correct++;
+				}
+			};
 
 			results.innerHTML = "<p>Congratulations, you're finsihed!</br> You scored " + correct + "/" + allQuestions.length + "!</p>";
 
